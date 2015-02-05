@@ -1,0 +1,13 @@
+{
+    "name": "rencie/cpm",
+    "description": "Critical Path Method Helper",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rencie Bautista",
+            "email": "rencie.bautista@yahoo.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
