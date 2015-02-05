@@ -8,6 +8,11 @@
             "email": "rencie.bautista@yahoo.com"
         }
     ],
+    "autoload": {
+        "psr-0": {
+            "Rencie\\Cpm\\": "src/"
+        }
+    },
     "minimum-stability": "dev",
     "require": {}
 }
