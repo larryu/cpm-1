@@ -9,7 +9,7 @@ class Cpm {
 	private $activities = array();
 	private $na;
 
-	public  function __construct( CpmActivity $activities) {
+	public  function __construct($activities) {
 		$this->activities = $activities;
 		$this->activities = $this->GetActivities($this->activities);
 		$this->activities = $this->WalkListAhead($this->activities);
