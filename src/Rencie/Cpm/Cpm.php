@@ -14,6 +14,10 @@ class Cpm {
 		$this->activities = $this->GetActivities($this->activities);
 		$this->activities = $this->WalkListAhead($this->activities);
 		$this->activities = $this->WalkListAback($this->activities);
+
+		// echo '<pre>';
+		// print_r($this->activities);
+		// echo '</pre>';
 	}
 	/**
 	 * Get all Activities
@@ -70,21 +74,24 @@ class Cpm {
 
 		for($i = $this->na - 2; $i >= 0; $i--)
 		{
-			foreach($activities[$i]->successors as $row)
-			{
-				$activity = CpmActivity::CheckActivity($activities,$row,$this->na);
-				if($activities[$i]->let == 0){
+			if(!empty($activities[$i]->successors)){
+				foreach($activities[$i]->successors as $row)
+				{
+					$activity = CpmActivity::CheckActivity($activities,$row,$this->na);
+					if($activities[$i]->let == 0){
 
-					$activities[$i]->let = $activity->lst;
-				}	
-				else{
-					if($activities[$i]->let > $activity->lst){
 						$activities[$i]->let = $activity->lst;
+					}	
+					else{
+						if($activities[$i]->let > $activity->lst){
+							$activities[$i]->let = $activity->lst;
+						}
+						
 					}
 					
 				}
-				
 			}
+			
 
 			$activities[$i]->lst = $activities[$i]->let - $activities[$i]->duration;
 		}
