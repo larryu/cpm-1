@@ -13,5 +13,6 @@
             "Rencie\\Cpm\\": "src/"
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "require": {}
 }

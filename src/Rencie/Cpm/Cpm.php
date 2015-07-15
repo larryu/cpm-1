@@ -104,7 +104,7 @@ class Cpm {
 		foreach($this->activities as $activity)
 		{
 			if(($activity->eet - $activity->let == 0) && ($activity->est - $activity->lst == 0)){
-				$path .= $activity->id ." -> ";
+				$path .= $activity->task_id ." -> ";
 			}
 		}
 		return substr($path, 0, -4);
